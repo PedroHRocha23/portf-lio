@@ -20,6 +20,7 @@ body {
   line-height: 1.6;
 }
 
+/* Links e destaques */
 a {
   color: var(--accent);
   text-decoration: none;
@@ -28,7 +29,6 @@ a {
 a:hover {
   color: #e6b800;
 }
-
 .highlight,
 .logo-dot {
   color: var(--accent);
@@ -58,13 +58,31 @@ a:hover {
 .nav-links a {
   font-weight: 500;
 }
+.nav-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
 .nav-toggle {
-  display: none;
   background: none;
   border: none;
   font-size: 1.5rem;
   color: var(--fg);
   cursor: pointer;
+}
+.lang-toggle {
+  background: none;
+  border: 2px solid var(--accent);
+  color: var(--accent);
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius);
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background var(--transition), color var(--transition);
+}
+.lang-toggle:hover {
+  background: var(--accent);
+  color: var(--bg);
 }
 
 /* Hero */
@@ -82,14 +100,12 @@ a:hover {
   margin-bottom: 0.5rem;
   color: #0d1117;
 }
-/* Destaque do nome com borda */
 .name {
   display: inline-block;
   padding: 0 0.3rem;
   border: 2px solid var(--accent);
   border-radius: 4px;
 }
-
 .hero-content h2 {
   font-size: 1.5rem;
   margin-bottom: 1.5rem;
@@ -97,7 +113,6 @@ a:hover {
   min-height: 2rem;
   overflow: hidden;
 }
-/* cursor piscando */
 #typing-text {
   display: inline-block;
   border-right: 2px solid var(--accent);
@@ -108,7 +123,6 @@ a:hover {
   from, to { border-color: transparent; }
   50%      { border-color: var(--accent); }
 }
-
 .btn {
   display: inline-block;
   margin-top: 1rem;
@@ -137,7 +151,7 @@ a:hover {
 /* Projetos */
 .projects .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
   gap: 1.5rem;
 }
 .card {

@@ -9,8 +9,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
 
   <!-- Favicon -->
-  <link rel="icon" href="/favicon.png" type="image/png" sizes="32x32">
-  <link rel="shortcut icon" href="/favicon.png">
+  <link rel="icon" href="favicon.png" type="image/png" sizes="32x32">
+  <link rel="shortcut icon" href="favicon.png">
 
   <!-- CSS -->
   <link rel="stylesheet" href="css/style.css">
@@ -19,70 +19,77 @@
   <nav class="navbar">
     <a href="#" class="logo">Pedro<span class="logo-dot">.</span></a>
     <ul class="nav-links">
-      <li><a href="#about">Sobre</a></li>
-      <li><a href="#projects">Projetos</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#contact">Contato</a></li>
+      <li><a href="#about" data-i18n="nav_about">Sobre</a></li>
+      <li><a href="#projects" data-i18n="nav_projects">Projetos</a></li>
+      <li><a href="#skills" data-i18n="nav_skills">Skills</a></li>
+      <li><a href="#contact" data-i18n="nav_contact">Contato</a></li>
     </ul>
-    <button class="nav-toggle" aria-label="Abrir menu">☰</button>
+    <div class="nav-controls">
+      <button class="nav-toggle" aria-label="Abrir menu">☰</button>
+      <button id="lang-toggle" class="lang-toggle">EN</button>
+    </div>
   </nav>
 
   <header class="hero">
     <div class="hero-content">
       <h1>
-        Olá, eu sou 
+        <span data-i18n="greeting">Olá, eu sou</span>
         <span class="highlight name">Pedro Rocha</span>
       </h1>
       <h2>
         <span id="typing-text"></span>
       </h2>
-      <a href="#contact" class="btn">Vamos conversar</a>
+      <a href="#contact" class="btn" data-i18n="hero_button">Vamos conversar</a>
     </div>
   </header>
 
   <main>
     <section id="about" class="section about">
-      <h2>Sobre mim</h2>
-      <p>Formado em Engenharia de Produção e apaixonado por arquitetura de sistemas, APIs RESTful e microserviços. Transformo requisitos em código limpo, testável e escalável.</p>
+      <h2 data-i18n="about_title">Sobre mim</h2>
+      <p data-i18n="about_text">
+        Formado em Engenharia de Produção e apaixonado por arquitetura de sistemas, APIs RESTful e microserviços. Transformo requisitos em código limpo, testável e escalável.
+      </p>
     </section>
 
     <section id="projects" class="section projects">
-      <h2>Projetos</h2>
+      <h2 data-i18n="projects_title">Projetos</h2>
       <div class="grid">
         <div class="card">
-          <h3>Tinder Literário</h3>
-          <p>Aplicação Flask + ML para recomendação de livros.</p>
+          <h3 data-i18n="project1_title">Tinder Literário</h3>
+          <p data-i18n="project1_desc">Aplicação Flask + ML para recomendação de livros.</p>
+          <br>
+          <p data-i18n="project1_desc_stack"></p>
+          <br>
           <a href="#" class="card-link">Ver no GitHub →</a>
         </div>
         <div class="card">
-          <h3>Sebo Virtual</h3>
-          <p>Plataforma de troca de livros estilo Tinder.</p>
+          <h3 data-i18n="project2_title">Banco Virtual</h3>
+          <p data-i18n="project2_desc">Protótipo  de uma instituição financeira.</p>
           <a href="#" class="card-link">Ver no GitHub →</a>
         </div>
-        <!-- Adicione mais cards aqui -->
       </div>
     </section>
 
     <section id="skills" class="section skills">
-      <h2>Skills</h2>
+      <h2 data-i18n="skills_title">Skills</h2>
       <ul class="skills-list">
         <li>Java · Spring Boot</li>
         <li>Python · Flask</li>
-        <li>PostgreSQL · pgvector</li>
+        <li>PostgreSQL · MySQL</li>
         <li>Docker · Kubernetes</li>
         <li>Git · CI/CD</li>
       </ul>
     </section>
 
     <section id="contact" class="section contact">
-      <h2>Contato</h2>
-      <p>Vamos trabalhar juntos? Envie um e-mail:</p>
-      <a href="mailto:seu@email.com" class="btn">Enviar mensagem</a>
+      <h2 data-i18n="contact_title">Contato</h2>
+      <p data-i18n="contact_text">Vamos trabalhar juntos? Envie um e-mail:</p>
+      <a href="mailto:seu@email.com" class="btn" data-i18n="contact_button">Enviar mensagem</a>
     </section>
   </main>
 
   <footer class="footer">
-    <p>© 2025 Pedro Rocha. Todos os direitos reservados.</p>
+    <p data-i18n="footer_text">© 2025 Pedro Rocha. Todos os direitos reservados.</p>
   </footer>
 
   <!-- JavaScript -->
